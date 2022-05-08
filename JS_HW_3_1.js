@@ -79,8 +79,9 @@ const users = [
     },
 ];
 
-
-// users.includes('09.10.2021') по идее должен выдать true
-const firstName
-console.log(users.indexOf("09.10.2021")
-
+//console.log (users.find (el => el.registrationDate = '09.10.2021')) // вывел первого юзера и успокоился
+//console.log (users.find (el => el.registrationDate = '10.10.2021'))
+ console.log (users.filter (el => el.registrationDate = '09.10.2021' ))
+ console.log (users.filter (el => el.registrationDate = '10.10.2021' ))
+ 
+// users.find((el, idx) => typeof el === "string" && idx === 2 ); 
