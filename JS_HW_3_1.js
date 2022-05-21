@@ -79,9 +79,10 @@ const users = [
     },
 ];
 
-//console.log (users.find (el => el.registrationDate = '09.10.2021')) // вывел первого юзера и успокоился
-//console.log (users.find (el => el.registrationDate = '10.10.2021'))
- console.log (users.filter (el => el.registrationDate = '09.10.2021' ))
- console.log (users.filter (el => el.registrationDate = '10.10.2021' ))
- 
-// users.find((el, idx) => typeof el === "string" && idx === 2 ); 
+// Write a function that will find and display in the console users registered on 10/09/2021 and 10/10/2021). The array above
+
+const usersFiltered = users.filter((user) =>{
+   if (user.registrationDate === '09.10.2021' || user.registrationDate === '10.10.2021') {
+        return user;   }
+})
+console.log (usersFiltered)

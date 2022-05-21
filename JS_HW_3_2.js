@@ -1,15 +1,19 @@
-const jsondata = require ("./task2.json")
-for (let j = 0 ; j < jsonData.length ; j++)
-{
-    for (let i=0;i<jsonData.length;i++){
-        if(i==j){
-            continue;
-        }
-        else if(jsonData[i].name==jsonData[j].name)
-        {
-            // console.log(i + ' '+ j)
-            jsonData.splice(j,1);s
-        }
+// Implement reading from JSON from task2.json file using fs module (for example) for further use in the function described in the assignment
+// An array of objects is given. Each object is a person's identity card. We need to store only unique values in this array. Implement a function that will do the job.
+
+const fs = require('fs')
+const users = JSON.parse(fs.readFileSync('./task2.json'))
+
+
+let uniquePersons = []
+persons.forEach((el) => {
+    if (uniquePersons.indexOf(JSON.stringify(el)) === -1) {
+        uniquePersons.push(JSON.stringify(el));
     }
-}
-console.log(jsonData)
+})
+
+
+//second variant
+//let checkid = Array.from(new Set(users.map(item = > JSON.stringify(item)))).map(item => JSON.parse(item));
+//console.log(chekid)
+//console.log(users.map(item => JSON.stringify(item)))
